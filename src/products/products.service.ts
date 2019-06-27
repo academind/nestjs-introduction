@@ -66,7 +66,7 @@ export class ProductsService {
     }
   }
 
-  private async findProduct(id: string): Promise<Model<Product>> {
+  private async findProduct(id: string): Promise<Product> {
     let product;
     try {
       product = await this.productModel.findById(id).exec();
